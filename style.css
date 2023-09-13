@@ -1,0 +1,142 @@
+:root {
+    /* Primary Colors */
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+
+    /* Neutral Colors */
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+.img {
+    width: 550px;
+    height: 100%;
+    background-image: url('images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-body {
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 550px);
+    padding: 50px 300px 100px 250px;
+}
+
+.content-body .title {
+    margin-top: 50px;
+    font-size: 75px;
+    font-weight: 600;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    color: var(--dark-grayish-red);
+}
+
+.content-body .title span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 15px;
+    font-size: 75px;
+    text-transform: uppercase;
+    color: var(--desaturated-red);
+}
+
+.content-body p {
+    font-weight: 400;
+    color: var(--desaturated-red);
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.content-body .email-div {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.content-body .email-div * {
+    position: absolute;
+}
+
+.content-body .email-div input {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    border: 1px solid var(--desaturated-red);
+    border-radius: 25px;
+    padding: 20px 30px;
+    color: var(--dark-grayish-red);
+    font-weight: 400;
+}
+
+.content-body .email-div input:focus{
+    color: var(--dark-grayish-red);
+    border: 2px solid var(--desaturated-red);
+    outline: none;
+}
+
+.content-body .email-div input::placeholder {
+    color: var(--desaturated-red);
+} 
+
+.content-body .email-div .submit-btn {
+    height: 100%;
+    width: 100px;
+    border-radius: 50px;
+    right: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 10px 8px 4px hsla(0, 93%, 68%, 0.1);
+}
+
+.content-body .email-div .submit-btn:hover {
+    background-image: linear-gradient(135deg, hsla(0, 80%, 86%, 0.6), hsla(0, 74%, 74%, 0.6));
+}
+
+.content-body .error-msg {
+    color: var(--soft-red);
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container .email-div .icon-error {
+    right: 120px;
+}
+
+.error-email {
+    border: 2px solid var(--soft-red) !important;
+}
+.hidden {
+    display: none;
+}
